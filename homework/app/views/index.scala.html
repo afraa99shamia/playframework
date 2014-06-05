@@ -1,0 +1,24 @@
+@(tasks: List[Task], taskForm: Form[Task])
+
+@import helper._
+
+@main("Calculate") {
+    
+    <center ><h1>Calculate solution of Equation from second degree</h1></center>    
+    
+    <br/><br/>
+    <center><h2>Add your parameter for Equation </h2></center>
+
+    <center><h3>aX^2+bX +c =0</h3></center>   
+    <center>
+    @form(routes.Application.result()) {
+        @inputText(taskForm("a")) 
+        @inputText(taskForm("b")) 
+        @inputText(taskForm("c")) 
+
+        <input type="submit" value="calculate">
+        
+    }
+</center>
+    
+}

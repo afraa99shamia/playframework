@@ -1,0 +1,26 @@
+@(tasks: Task)
+
+@import helper._
+
+@main("Result") {
+   
+ <br/>  <br/>
+<center> <h1> The Result is </h1></center> 
+<center> <h2> your Equation / <u> <i>  <font color = blue > 
+@tasks.a X^2 + @tasks.b X + @tasks.c
+</font> </i> </u> / has  @tasks.list.size()  solution(s) </h2></center>
+<center> <font color = red >
+@tasks.res
+</font > </center>
+<br/><br/>
+
+ <center>   <h3> Calculate  other Equation </h3>
+    
+    @form(routes.Application.calc()) {
+        
+               
+        <input type="submit" value=" Return ">
+        
+    }
+    </center>
+}
